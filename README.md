@@ -40,14 +40,14 @@ Make sure the dependencies are installed first:
 
 Kubediff can also be run as a service on Kubernetes, periodically downloading the
 latest configuration from Github, comparing it to the running configuration.  In
-this mode Kubediff will also offers a very simple UI showing the output and
+this mode Kubediff also offers a very simple UI showing the output and
 export the result to Prometheus, all courtesy to [prom-run](https://github.com/tomwilkie/prom-run).
 
-To deploy to Kubernetes, you much first make a copy of the YAML files in `k8s`
+To deploy to Kubernetes, you must first make a copy of the YAML files in `k8s`
 and update the following fields:
 
 - `kubediff-rc.yaml` the first argument to git-sync must be the location of
-  the config repo, and the last argument to kubediff must the the location
+  the config repo, and the last argument to kubediff must be the location
   in this repo of your config.
 - `kubediff-secret.yaml` the username and password must be set to valid
   [github OAuth token](https://developer.github.com/guides/managing-deploy-keys/#https-cloning-with-oauth-tokens).
